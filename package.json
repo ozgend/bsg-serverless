@@ -6,7 +6,7 @@
   "main": "handler.js",
   "scripts": {
     "lambda-local" : "./node_modules/.bin/lambda-local",
-    "test-find":"lambda-local -f handler.js -e tests/find_event.json"
+    "test-find":"lambda-local -f handler.js -e aws-tests/find_event.json"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
