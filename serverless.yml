@@ -1,0 +1,16 @@
+service: bisiktirgit-lambda
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  region: eu-west-2
+
+functions:
+  find:
+    handler: handler.find
+    events:
+      - http:
+          path: find/{id}
+          method: get
+          cors: true
+
