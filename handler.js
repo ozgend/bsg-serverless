@@ -15,6 +15,8 @@ module.exports.find = (event, context, callback) => {
     FuckModel
       .find({ Slug: slug })
       .then((item) => {
+        delete item.track;
+        delete item._id;
         callback(null, { statusCode: 200, body: JSON.stringify({ success: true, fuckoff: item }) });
       })
       .catch((err) => {
