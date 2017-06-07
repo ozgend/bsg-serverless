@@ -27,10 +27,6 @@ module.exports.find = (event, context, callback) => {
   });
 };
 
-function convertToResponseModel(dbo) {
-  return { To: dbo.To, From: dbo.From, Message: dbo.Message, Time: dbo.Time, Timestamp: dbo.Timestamp, views: dbo.views };
-}
-
 FuckModel.prototype.toResponseModel = function () {
   return { To: this.To, From: this.From, Message: this.Message, Time: this.Time, Timestamp: this.Timestamp, views: this.views };
 }
