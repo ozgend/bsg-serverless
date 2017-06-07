@@ -4,9 +4,16 @@
   "author": "denolk",
   "description": "Serverless REST API for bisiktirgit.be",
   "main": "handler.js",
+  "scripts": {
+    "lambda-local" : "./node_modules/.bin/lambda-local",
+    "test-find":"lambda-local -f handler.js -e tests/find_event.json"
+  },
   "dependencies": {
     "bluebird": "^3.5.0",
     "mongoose": "^4.9.6",
     "validator": "^7.0.0"
+  },
+  "devDependencies": {
+    "aws-lambda-local": "^1.0.15"
   }
 }
